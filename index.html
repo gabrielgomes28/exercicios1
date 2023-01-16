@@ -1,0 +1,38 @@
+<html>
+  <body>
+      <h1>Maior dos numeros</h1>
+
+    <form id="form" action="#" method="get">  
+        <input required placeholder="Digite numero 1" type="number" name="n1" id="snum"> <br>
+         <input required placeholder="Digite  numero 2" type="number" name="n2" id="snum2"> <br>
+         <input type="submit" value="aplicar">
+         </form>
+        <p id="resposta">  a resposta</p>
+<script>
+var form=document.getElementById('form');
+form.addEventListener("submit", function (e){
+    e.preventDefault();
+    verificar();
+
+})
+function verificar(){
+        var snum = document.getElementById('snum')
+        var num1 = Number(snum.value)
+        var snum2 = document.getElementById('snum2')
+        var num2 = Number(snum2.value)
+        var res  = document.getElementById('resposta')
+
+
+
+        if(num1 > num2){
+         res.innerHTML='invalido'
+        }else{
+            res.innerHTML='sucesso'
+        }
+}
+
+
+</script>
+
+      
+</html>]
